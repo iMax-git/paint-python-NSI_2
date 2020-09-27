@@ -1,7 +1,13 @@
 from tkinter import *
-from main.tools import  *
-from main.items import  *
-from main.Globals import *
+
+try:
+    from main.tools import  *
+    from main.items import  *
+    from main.Globals import *
+except ImportError:
+    from Main.tools import  *
+    from Main.items import  *
+    from Main.Globals import *
 
 
 

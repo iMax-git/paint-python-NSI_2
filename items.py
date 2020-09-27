@@ -11,12 +11,13 @@ class Rectangle:
         self.x = x
         self.y = y 
         self.width = width
+        self.strock = 0
         self.height = height
         self.color = color
         self.fg = "black"
     
     def Draw(self, canvas):
-        canvas.create_rectangle(self.x,self.y,self.x+self.width,self.y+self.height, fill=self.color, outline=self.fg)
+        canvas.create_rectangle(self.x,self.y,self.x+self.width,self.y+self.height, fill=self.color, outline=self.fg, width=self.strock)
     
     def drawZone(self, canvas):
         canvas.create_rectangle(self.x-5,self.y-5,self.x+5,self.y+5, fill=None, outline="black")
@@ -37,10 +38,11 @@ class Circle:
         self.x = x
         self.y = y 
         self.radius = radius
+        self.strock = 0
         self.color = color
     
     def Draw(self, canvas):
-        canvas.create_oval(self.x,self.y,self.x+self.radius,self.y+self.radius, fill=self.color)
+        canvas.create_oval(self.x,self.y,self.x+self.radius,self.y+self.radius, fill=self.color, width=self.strock)
         
     def drawZone(self, canvas):
         canvas.create_rectangle(self.x-5,self.y-5,self.x+5,self.y+5, fill=None, outline="black")
@@ -65,10 +67,11 @@ class Line:
         self.y = y 
         self.width = width
         self.height = height
+        self.strock = 0
         self.color = color
     
     def Draw(self, canvas):
-        canvas.create_line(self.x,self.y,self.x+self.width,self.y+self.height, fill=self.color)
+        canvas.create_line(self.x,self.y,self.x+self.width,self.y+self.height, fill=self.color, width=self.strock)
     
     def drawZone(self, canvas):
         canvas.create_rectangle(self.x-5,self.y-5,self.x+5,self.y+5, fill=None, outline="black")
@@ -95,10 +98,11 @@ class Oval:
         self.y = y 
         self.width = width
         self.height = height
+        self.strock = 0
         self.color = color
     
     def Draw(self, canvas):
-        canvas.create_oval(self.x,self.y,self.x+self.height,self.y+self.width, fill=self.color)
+        canvas.create_oval(self.x,self.y,self.x+self.height,self.y+self.width, fill=self.color, width=self.strock)
     
     def drawZone(self, canvas):
         canvas.create_rectangle(self.x-5,self.y-5,self.x+5,self.y+5, fill=None, outline="black")

@@ -3,7 +3,10 @@ Created on 23 sept. 2020
 
 @author: tdiard
 '''
-from main.Globals import *
+try:
+    from main.Globals import *
+except ImportError:
+    from Main.Globals import *
 
 colors= ["red","green","blue","orange","pink","violet","cyan","yellow","white","black"]
 
@@ -73,6 +76,6 @@ class StrokeButton:
             globals["stroke"] = self.value
             selected = globals['selected']
             if(selected != None):
-                selected.width = self.value
+                selected.strock = self.value
         print(selected)
         print(self.value)
